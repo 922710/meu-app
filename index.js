@@ -11,3 +11,15 @@ app.get('/', function(request, response) {
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
+
+app.get('/hora', (req, res) => {
+  res.send(`Agora são ${new Date().toLocaleString()}`);
+});
+
+app.get('/sobre', (req, res) => {
+  res.send('Essa é uma rota adicional explicando mais sobre meu projeto!');
+});
+
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+});
